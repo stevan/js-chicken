@@ -1,0 +1,51 @@
+<html>
+<head>
+<script language="javascript" src="../tests/lib/jQuery.js"></script>
+<script language="javascript" src="../lib/JS/Chicken.js"></script>
+<script language="javascript">
+
+$(document).ready(function () {
+    
+    var dog_collection = new Chicken.Collection ({
+        row_selector : '.table_row'
+    });    
+    
+    dog_collection.initialize( $('body'), '#dogs' );
+    
+    $('button.append').click(function () {
+        dog_collection.append_values(
+            [
+                { '.sound' : "Bark" }
+            ]
+        );
+    })
+    
+    $('button.prepend').click(function () {
+        dog_collection.prepend_values(
+            [
+                { '.sound' : "Woof" }
+            ]
+        );
+    })    
+});
+
+</script>
+</head>
+<body>
+
+<table id="dogs" border="1">
+    <thead>
+        <th>Hello</th>
+    </thead>
+    <tbody>
+        <tr class="table_row">
+            <td>My dog says <span class="sound">NAME</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="append">Append more dogs</button>
+<button class="prepend">Prepend more dogs</button>
+
+</body>
+</html>
