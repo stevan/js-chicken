@@ -12,7 +12,7 @@ __END__
 
 =head1 NAME
 
-JS::Chicken - Chicken Templating module for JS
+JS::Chicken - Templating module for Javascript
 
 =head1 SYNOPSIS
 
@@ -20,7 +20,7 @@ JS::Chicken - Chicken Templating module for JS
   $('<div>Hello <span>Nobody</span></div>').process_template({
       'span' : "World"
   });
-  
+
   // produces <div>Hello <span>World</span></div>
 
   // slightly more complex example
@@ -31,16 +31,49 @@ JS::Chicken - Chicken Templating module for JS
           target.html("World")
       })
   });
-  
+
   // produces <div>Hello <a href="http://www.world.com">World</a></div>
 
 =head1 DESCRIPTION
 
-Chicken is a templating system written in Javascript using jQuery 
-to do structured DOM substitutions. This type of templating is 
-sometimes called "callback templating", because instead of the 
-template system pushing values into a template, you specify 
-a set of triggers or events which fire a callback, the result of 
+                     ,--,                          ,--.                   ,--.
+    ,----..        ,--.'|   ,---,  ,----..     ,--/  /|    ,---,.       ,--.'|
+   /   /   \    ,--,  | :,`--.' | /   /   \ ,---,': / '  ,'  .' |   ,--,:  : |
+  |   :     :,---.'|  : '|   :  :|   :     ::   : '/ / ,---.'   |,`--.'`|  ' :
+  .   |  ;. /|   | : _' |:   |  '.   |  ;. /|   '   ,  |   |   .'|   :  :  | |
+  .   ; /--` :   : |.'  ||   :  |.   ; /--` '   |  /   :   :  |-,:   |   \ | :
+  ;   | ;    |   ' '  ; :'   '  ;;   | ;    |   ;  ;   :   |  ;/||   : '  '; |
+  |   : |    '   |  .'. ||   |  ||   : |    :   '   \  |   :   .''   ' ;.    ;
+  .   | '___ |   | :  | ''   :  ;.   | '___ |   |    ' |   |  |-,|   | | \   |
+  '   ; : .'|'   : |  : ;|   |  ''   ; : .'|'   : |.  \'   :  ;/|'   : |  ; .'
+  '   | '/  :|   | '  ,/ '   :  |'   | '/  :|   | '_\.'|   |    \|   | '`--'
+  |   :    / ;   : ;--'  ;   |.' |   :    / '   : |    |   :   .''   : |
+   \   \ .'  |   ,/      '---'    \   \ .'  ;   |,'    |   | ,'  ;   |.'
+    `---`    '---'                 `---`    '---'      `----'    '---'
+
+                           ,~.
+                         ,-'__ `-,
+                        {,-'  `. }              ,')
+                       ,( a )   `-.__         ,',')~,
+                      <=.) (         `-.__,==' ' ' '}
+                        (   )                      /)
+                         `-'\   ,                    )
+                             |  \        `~.        /
+                             \   `._        \      /
+                              \     `._____,'    ,'
+                               `-.             ,'
+                                  `-._     _,-'
+                                      77jj'
+                                     //_||
+                                  __//--'/`
+                                ,--'/`  '
+
+
+Chicken is a templating system written in Javascript using jQuery
+to do structured DOM substitutions. This type of templating is
+sometimes called "callback templating", because instead of the
+template system pushing values into a template, you specify
+a set of triggers or events which fire a callback, the result of
 which is the template operation.
 
 =head2 Chicken, WTF?!?!?
@@ -69,7 +102,7 @@ Stevan Little E<lt>stevan.little@iinteractive.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2008 Infinity Interactive, Inc.
+Copyright 2008-2009 Infinity Interactive, Inc.
 
 L<http://www.iinteractive.com>
 
