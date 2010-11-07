@@ -1,5 +1,11 @@
 Revision history for Perl extension JS-Chicken
 
+0.03
+    - allowing the '.' selector to work
+      on the current element in a collection
+      rather then needing to have extra layers
+        - added tests for this
+
 0.02 Fri. Feb. 27, 2009
     - bad copyright info in the README
 
