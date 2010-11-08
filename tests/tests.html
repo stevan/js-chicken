@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <link rel="stylesheet" href="lib/qunit.css" type="text/css"/>
+
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="../lib/JS/Chicken.js"></script>
+    <script type="text/javascript" src="lib/qunit.js"></script>
+    <script type="text/javascript">
+
+        var test_template = function(starting_html, params, ending_html, message) {
+            ok(
+                $(starting_html).process_template(params).html() == ending_html,
+                message
+            );
+        }
+
+    </script>
+    <script type="text/javascript" src="t/001_basic.t.js"></script>
+    <script type="text/javascript" src="t/002_thunks.t.js"></script>
+    <script type="text/javascript" src="t/003_collection.t.js"></script>
+    <script type="text/javascript" src="t/004_hierarchy.t.js"></script>
+    <script type="text/javascript" src="t/005_deep_selectors.t.js"></script>
+    <script type="text/javascript" src="t/006_error_handling.t.js"></script>
+    <script type="text/javascript" src="t/007_adding_to_collection.t.js"></script>
+</head>
+<body>
+    <h1 id="qunit-header">QUnit example</h1>
+    <h2 id="qunit-banner"></h2>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+</body>
+</html>

@@ -5,6 +5,8 @@ Revision history for Perl extension JS-Chicken
       on the current element in a collection
       rather then needing to have extra layers
         - added tests for this
+    - changed testing infrastructure to Qunit
+      from the older Test.Builder version
 
 0.02 Fri. Feb. 27, 2009
     - bad copyright info in the README
