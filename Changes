@@ -1,10 +1,33 @@
 Revision history for Perl extension JS-Chicken
 
 0.03
+    - added some new types of parameters that
+      can be passed and how they are handled.
+      - raw callback function
+        - if passed a function, it simply
+          gets applied with the target as
+          its only argument
+      - Chicken.Param.Attributes
+        - this can be passed instead
+          of just a string and it will
+          be used to alter the attributes
+          of the target instead of just
+          its innerHTML
+      - Chicken.Param.EventHandlers
+        - this can be passed instead
+          of just a string and it will
+          be used to attach event handlers
+          to a target
+
+    - Added Chicken.Param.Combinator
+      - this accepts an array of the parameters
+        above and applies them in order to the
+        target
+
     - allowing the '.' selector to work
       on the current element in a collection
       rather then needing to have extra layers
-        - added tests for this
+      - added tests for this
     - changed testing infrastructure to Qunit
       from the older Test.Builder version
 
