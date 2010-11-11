@@ -3,7 +3,7 @@ test(
     "Combination test",
     function() {
 
-        var plugin_output;
+        var plugin_output = 0;
         $.fn.testing = function (one, two) {
             $(this).dblclick(function () { plugin_output = one + two })
         };
@@ -35,6 +35,8 @@ test(
             $tmpl.find('a').dblclick();
             ok(plugin_output == 4, '... the plugin handler was bound and ran');
         })();
+
+        plugin_output = 0;
 
         (function () {
             var output;

@@ -3,7 +3,7 @@ test(
     "Custom Event Handler test",
     function() {
 
-        var output;
+        var output = 0;
         $.fn.testing = function (one, two) {
             $(this).click(function () { output = one + two })
         };
@@ -19,6 +19,8 @@ test(
             ok(output == 4, '... the event handler was bound and ran');
 
         })();
+
+        output = 0;
 
         (function () {
 
