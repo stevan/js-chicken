@@ -25,12 +25,9 @@ test(
                     function (e) { e.testing(2, 2) }
                 ])
             });
-            ok(
-                $tmpl.html()
-                    ==
-                'Hello <a href="http://www.world.com" target="_blank" class="testing">World</a>',
-                '... got the right HTML output'
-            );
+            ok($tmpl.find('a').attr('href') == 'http://www.world.com', '.. got the right HREF');
+            ok($tmpl.find('a').attr('target') == '_blank', '.. got the right TARGET');
+            ok($tmpl.find('a').attr('class') == 'testing', '.. got the right CLASS');
 
             $tmpl.find('a').click();
             ok(output == "gotcha", '... the event handler was bound and ran');
@@ -56,12 +53,9 @@ test(
                     function (e) { e.testing(2, 2) }
                 ]
             });
-            ok(
-                $tmpl.html()
-                    ==
-                'Hello <a href="http://www.world.com" target="_blank" class="testing">World</a>',
-                '... got the right HTML output'
-            );
+            ok($tmpl.find('a').attr('href') == 'http://www.world.com', '.. got the right HREF');
+            ok($tmpl.find('a').attr('target') == '_blank', '.. got the right TARGET');
+            ok($tmpl.find('a').attr('class') == 'testing', '.. got the right CLASS');
 
             $tmpl.find('a').click();
             ok(output == "gotcha", '... the event handler was bound and ran');
